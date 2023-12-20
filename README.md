@@ -26,7 +26,7 @@ The data repository contains these rotated and annotated data files.
 # Spatial movement analysis of body and proboscis
 Two functions with partly overlapping functionality were used in this analysis
 1) plot_heat_map analyses the distribution of proboscis contacts on the flower, relative  to the pattern. It plots a heatmap of proboscis contacts and generates histograms of the contact distributions along the cardinal axes of the pattern, and in the outer and inner thirds of the pattern. It also calculates contact scores, which count and compare the number of proboscis contacts along either cardinal axis of the flower and pattern, as well as within the inner and outer thirds of the pattern. For line patterns, it compares these scores to a hypothetical pattern rotated 90 degrees from the originial, for cross patterns 45 degrees rotated.
-2) plot_heat_map_proboscis_track analyses the distribution of proboscis contacts on the flower, relative  to the pattern. 
+2) plot_heat_map_prob_track analyses the distribution of proboscis contacts on the flower, relative  to the pattern. 
 It plots a heatmap of proboscis contacts and the paths as line plots. 
 It also calculates contact scores, which count and compare the number of proboscis contacts along either cardinal axis of the flower and pattern, and within the pattern and on the background, and includes scales for the area of pattern and background. 
 From the proboscis tracks, the duration, speed and tortuosity of probing are extracted and plotted, as well as the mean direction and vector length of the probing tracks, relative to the orientation of the pattern.
@@ -36,9 +36,18 @@ Moreover, the body orientation (defined by the head-thorax axis) and position of
 # Analysis of flight relative to pattern
 
 1) flight_orientation extracts key descriptors of the animals' flight during the approach, the probing phase and the departure. These are forward and rotational flight speed and predominant rotation direction, as well as body angle relative to the pattern axis. The output is saved as a flightORI_filename.mat file.
-2) Uses the output of the above script, and plots the descriptors of flight across all selected data files (generally used to plot data from multiple animals within one condition).
+2) flight_orientation_popPlot_cond uses the output of the above script, and plots the descriptors of flight across all selected data files (generally used to plot data from multiple animals within one condition).
 
 # Summary comparisons and statistics
 
 1) compAcrossConds plots and statistically compares individually saved proboscis data from separate conditions (data generated with plot_heat_map_proboscis_track and analyseProboscisMotion)
 2) compAcrossConds_HW plots and statistically compares individually saved data of halfwidth of proboscis contact distributions from separate conditions (data generated with plot_heat_map_proboscis_track)
+
+# Dependencies 
+1) euclid_dist computes the Euclidian distance (D) and the angle relative to the horizontal (alpha) between points in a 2 column vector (if one input) or sets of points a and b if two inputs rows are individual observations, columns are x and then y value of the point
+2) shadedErrorBar_anna, which is a slightly altered version of shadedErrorBar by Rob Campbell https://de.mathworks.com/matlabcentral/fileexchange/26311-raacampbell-shadederrorbar (which would also work)
+3) Circular Statistics Toolbox (Directional Statistics) Version 1.21.0.0 by Philipp Berens https://de.mathworks.com/matlabcentral/fileexchange/10676-circular-statistics-toolbox-directional-statistics
+4) interparc Version 1.3.0.0 by John D'Errico https://de.mathworks.com/matlabcentral/fileexchange/34874-interparc
+5) Violin Plot Version 1.7.0.0 by Holger Hoffmann https://de.mathworks.com/matlabcentral/fileexchange/45134-violin-plot
+6) CircHist - circular / polar / angle histogram Version 1.3.0.2 by Frederick Zittrell https://de.mathworks.com/matlabcentral/fileexchange/66258-circhist-circular-polar-angle-histogram
+7) Perceptually uniform colormaps Version 1.3.2 by Ander Biguri https://de.mathworks.com/matlabcentral/fileexchange/51986-perceptually-uniform-colormaps
