@@ -1,5 +1,5 @@
 # Code_Kannegieser_et_al_2024
-Analysis files for the publication "Visual guidance fine-tunes probing movements of an insect appendage" , DOI follows soon. Processes body and proboscis positions of hawkmoths probing artificial flower patterns.  
+Analysis files for the publication "Visual guidance fine-tunes probing movements of an insect appendage" , https://doi.org/10.1073/pnas.230693712. Processes body and proboscis positions of hawkmoths probing artificial flower patterns.  
 The raw data for this publication is deposited at https://doi.org/10.6084/m9.figshare.22639981.v1.
 
 The scripts and functions in this repository build an analysis pipeline, to extract and process the data shown in the manuscript from csv files containing the curated tracking data (for further details, see Manuscript Methods). 
